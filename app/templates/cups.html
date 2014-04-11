@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+<section role="main" id="cups" class="main-container">
+	<h2>C.U.P.S.</h2>
+	<h3>Know The Signs</h3>
+
+	<!-- cold skin -->
+	<div class="row">
+		<div class="large-6 med-6 small-6 columns">
+			<h4>C - Cold Skin</h4>
+			<p>Alcohol affects parts of the brain that maintain a healthy body temperature. Too much alcohol can stop this part of the brain from working and can cause your organs to shut down. People with alcohol poisoning can be cold to the touch.</p>
+		</div>
+		<div class="large-6 med-6 small-6 columns cups-img">
+			<img src="{{url_for('static', filename='img/beaware_cold_skin.png')}}" alt="Cold Skin" />
+		</div>
+	</div>
+	<div class="row">
+		<hr />
+	</div>
+
+	<!-- unresponsive -->
+	<div class="row">
+		<div class="large-6 med-6 small-6 columns cups-img">
+			<img src="{{url_for('static', filename='img/beaware_unconciousness.png')}}" alt="Unresponsive" />
+		</div>
+		<div class="large-6 med-6 small-6 columns">
+			<h4>U - Unresponsive</h4>
+			<p>When a person has consumed so much alcohol that they can’t function normally they may not be able to respond to anything. It's like alcohol anesthesia.</p>
+		</div>
+	</div>
+	<div class="row">
+		<hr />
+	</div>
+
+	<!-- puking -->
+	<div class="row">
+		<div class="large-6 med-6 small-6 columns">
+			<h4>P - Puking</h4>
+			<p>Alcohol poisoning causes people to puke. Puking won't lower a person's BAC, but it can make a person even more dehydrated. Alcohol also inhibits a person's gag reflex. This might make a person choke on their own vomit or breath it into their lungs.</p>
+		</div>
+		<div class="large-6 med-6 small-6 columns cups-img">
+			<img src="{{url_for('static', filename='img/beaware_vomiting.png')}}" alt="Puking" />
+		</div>
+	</div>
+	<div class="row">
+		<hr />
+	</div>
+
+	<!-- unresponsive -->
+	<div class="row">
+		<div class="large-6 med-6 small-6 columns cups-img">
+			<img src="{{url_for('static', filename='img/beaware_slow_breath.png')}}" alt="Slow Breathing" />
+		</div>
+		<div class="large-6 med-6 small-6 columns">
+			<h4>S - Slow Breathing</h4>
+			<p>Alcohol also affects the part of the brain that regulates breathing. Breaths can become slow, shallow and irregular. A person may even have fewer than 8 breaths per minute. If a person isn't breathing enough, they aren't getting enough oxygen to their brain.</p>
+		</div>
+	</div>
+	<div class="row">
+		<hr />
+	</div>
+
+	<section id="resources">
+		<h2>Campus Resources</h2>
+
+		<h4>Emergency</h4>
+		<div class="row">
+			<div class="large-6 med-6 small-6 columns">
+				<p><strong>911</strong> (From Anywhere)</p>
+				<p><strong>711</strong> (From Campus)</p>
+			</div>
+			<div class="large-6 med-6 small-6 columns">
+				<p><strong>#78</strong> or <strong>#SU</strong> (Text)</p>
+				<p><strong>(315) 443-2224</strong> (DPS)</p>
+			</div>
+		</div>
+
+		<h4>Get Home Safe</h4>
+		<div class="row">
+			<div class="large-12 columns">
+				<p><strong>Bus Schedules</strong> - <a href="#">LINK</a></p>
+				<p><strong>Taxi Services</strong> - <a href="#">LINK</a></p>
+			</div>
+		</div>
+	</section>
+</section>
+{% endblock %}

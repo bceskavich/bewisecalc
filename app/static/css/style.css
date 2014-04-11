@@ -1,0 +1,241 @@
+/* ###########################
+Universal Setup
+########################### */
+body {
+	background-color: #eee;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.clearfloat {
+	clear: both;
+}
+
+.main-container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+h2 {
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 800;
+	font-size: 100px;
+	text-align: center;
+}
+
+h3 {
+	font-weight: 700;
+	font-size: 60px;
+	text-align: center;
+	font-style: italic;
+	margin-top: -25px;
+	padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 961px) {
+	.main-container {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	h2 {
+		font-size: 50px;
+	}
+
+	h3 {
+		font-size: 25px;
+		margin-top: -15px;
+	}
+}
+
+/* ###########################
+Welcome Screen
+########################### */
+#home {
+	background-color: #ff6947;
+}
+
+#home div:first-child {
+	margin: 0px auto;
+	padding-top: 200px;
+	width: 95px;
+	height: 95px;
+}
+
+#home #bac,
+#home #cups {
+	margin: 40px auto;
+	height: 90px;
+	background-color: #32303e;
+	line-height: 90px;
+	border-radius: 20px;
+	width: 400px;
+}
+
+#home #bac:hover,
+#home #cups:hover {
+	background-color: #313131;
+}
+
+#home a {
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 800;
+	font-size: 40px;
+	display: block;
+	text-align: center;
+}
+
+@media only screen and (max-width: 641px) {
+	#home div:first-child {
+		padding-top: 100px;
+	}
+
+	#home #bac,
+	#home #cups {
+		margin: 20px auto;
+		height: 45px;
+		line-height: 45px;
+		width: 200px;
+	}
+
+	#home a {
+		font-size: 20px;
+	}
+}
+
+/* ###########################
+Header & Navigation
+########################### */
+.header-container {
+	width: 100%;
+	height: 100px;
+	background-color: #ff6947;
+}
+
+nav {
+	width: 960px;
+	margin: 0px auto;
+}
+
+.sidebar {
+	width: 100px;
+	height: 100px;
+}
+
+.sidebar img {
+	width: 90px;
+	height: 90px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.header-container h1 {
+	height: 100px;
+	font-weight: 800;
+	font-size: 70px;
+	text-align: center;
+	margin: 0 auto;
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.header-container img {
+	width: 90px;
+	height: 90px;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+
+@media only screen and (max-width: 961px) {
+	nav {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.header-container {
+		height: 50px;
+	}
+
+	.sidebar {
+		width: 45px;
+		height: 50px;
+		margin-left: 2px;
+	}
+
+	.sidebar img {
+		width: 40px;
+		height: 45px;
+		margin-top: 2px;
+		margin-left: 2px;
+	}
+
+	.header-container h1 {
+		font-size: 30px;
+		line-height: 50px;
+	}
+
+	.header-container img {
+		width: 44px;
+		height: 44px;
+		margin: 3px 0 0 5px;
+	}
+}
+
+/* ###########################
+CUPS Resources
+########################### */
+#cups h4 {
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 32px;
+	line-height: 36px;
+	font-weight: 800;
+	padding: 20px 0px;
+}
+
+#cups .cups-img {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#cups .main-container p {
+	font-size: 1.5em;
+}
+
+#cups #resources h2 {
+	font-size: 70px;
+}
+
+@media only screen and (max-width: 700px) {
+	#cups h4 {
+		font-size: 20px;
+		padding: 10px 0px;
+	}
+
+	#cups .main-container p {
+		font-size: 1em;
+	}
+
+	#cups .cups-img {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	#cups #resources h2 {
+		font-size: 25px;
+	}
+}
+
+
