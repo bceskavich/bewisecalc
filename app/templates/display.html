@@ -1,6 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
-<section role="main" class="main-container">
-  {{bac}}
+<section role="main" class="main-container info">
+  <h2>{{bac}}</h2>
+  <h3>You might be...</h3>
+
+  <div class="row">
+    <div class="large-6 med-6 small-6 columns">
+      <h4>Feeling groggy.</h4>
+      <p>{{text}}</p>
+    </div>
+    <div class="large-6 med-6 small-6 columns cups-img">
+      <img src="{{url_for('static', filename='img/owl_loopy.png')}}" alt="Cold Skin" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 med-12 small-12 columns">
+      <div id="button"><a href="{{url_for('resources')}}">Resources</a></div>
+    </div>
+  </div>
 </section>
+<style type="text/css">
+  body {
+    background-color: {{color}};
+  }
+</style>
 {% endblock %}

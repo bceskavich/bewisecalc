@@ -34,6 +34,7 @@ h2 {
 }
 
 h3 {
+	font-family: 'Open Sans', Arial, sans-serif;
 	font-weight: 700;
 	font-size: 60px;
 	text-align: center;
@@ -60,7 +61,7 @@ h3 {
 }
 
 /* ###########################
-Welcome Screen
+Welcome Screen (Plus Display Section Buttons)
 ########################### */
 #home {
 	background-color: #ff6947;
@@ -74,7 +75,8 @@ Welcome Screen
 }
 
 #home #bac,
-#home #cups {
+#home #cups,
+.info #button {
 	margin: 40px auto;
 	height: 90px;
 	background-color: #32303e;
@@ -84,11 +86,13 @@ Welcome Screen
 }
 
 #home #bac:hover,
-#home #cups:hover {
+#home #cups:hover,
+.info #button:hover {
 	background-color: #313131;
 }
 
-#home a {
+#home a,
+.info #button a {
 	color: #fff;
 	text-decoration: none;
 	font-family: 'Open Sans', Arial, sans-serif;
@@ -104,14 +108,16 @@ Welcome Screen
 	}
 
 	#home #bac,
-	#home #cups {
+	#home #cups,
+	.info #button {
 		margin: 20px auto;
 		height: 45px;
 		line-height: 45px;
 		width: 200px;
 	}
 
-	#home a {
+	#home a,
+	.info #button a {
 		font-size: 20px;
 	}
 }
@@ -195,9 +201,9 @@ nav {
 }
 
 /* ###########################
-CUPS Resources
+CUPS Resources + BAC Results
 ########################### */
-#cups h4 {
+.info h4 {
 	font-family: 'Open Sans', Arial, sans-serif;
 	font-size: 32px;
 	line-height: 36px;
@@ -205,35 +211,35 @@ CUPS Resources
 	padding: 20px 0px;
 }
 
-#cups .cups-img {
+.info .cups-img {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
-#cups .main-container p {
+.info .main-container p {
 	font-size: 1.5em;
 }
 
-#cups #resources h2 {
+.info #resources h2 {
 	font-size: 70px;
 }
 
 @media only screen and (max-width: 700px) {
-	#cups h4 {
+	.info h4 {
 		font-size: 20px;
 		padding: 10px 0px;
 	}
 
-	#cups .main-container p {
+	.info .main-container p {
 		font-size: 1em;
 	}
 
-	#cups .cups-img {
+	.info .cups-img {
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
 
-	#cups #resources h2 {
+	.info #resources h2 {
 		font-size: 25px;
 	}
 }
