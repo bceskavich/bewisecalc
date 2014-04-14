@@ -11,13 +11,10 @@ def calculate(drinks, weight, period, gender):
     for drink in drinks.keys():
         if drink == "beer":
             total += 12 * .05 * drinks[drink]
-            print "Beer:" + str(total)
         elif drink == "wine":
             total += 5 * .12 * drinks[drink]
-            print "Wine:" + str(total)
         elif drink == "liqour":
             total += 1.25 * .4 * drinks[drink]
-            print "Liqour:" + str(total)
 
     bac = ((total * 5.14) / (weight * r)) - .015 * period
     return bac

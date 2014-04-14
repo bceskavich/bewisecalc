@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 <section role="main" class="main-container">
+  <form action="" method="post" name="bac">
+    {{form.hidden_tag()}}
+    <p>Beer: {{form.beer}}</p>
+    <p>Wine: {{form.wine}}</p>
+    <p>Liqour: {{form.liqour}}</p>
+    <p>Hours: {{form.hours}}</p>
+    <p>Weight: {{form.weight}}</p>
+    <p>Gender: {{form.gender}}</p>
+    <p><input type="submit" value="Calcuate!"></p>
+  </form>
 </section>
 {% endblock %}
