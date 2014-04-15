@@ -1,14 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
-<section role="main" class="main-container">
+<section role="main" class="main-container" id="calc">
+  <h2>TALLY UP YOUR NIGHT</h2>
   <form action="" method="post" name="bac">
     {{form.hidden_tag()}}
-    <p>Beer: {{form.beer}}</p>
-    <p>Wine: {{form.wine}}</p>
-    <p>Liqour: {{form.liqour}}</p>
-    <p>Hours: {{form.hours}}</p>
-    <p>Weight: {{form.weight}}</p>
-    <p>Gender: {{form.gender}}</p>
+    <div class="row">
+        <div class="large-6 med-6 small-6 columns">
+            <div class="calc-image"><img src="{{url_for('static', filename='img/bac_beer.png')}}" /></div>
+            {{form.beer}}
+        </div>
+        <div class="large-6 med-6 small-6 columns">
+            <div class="calc-image"><img src="{{url_for('static', filename='img/bac_wine.png')}}" /></div>
+            {{form.wine}}
+        </div>
+    </div>
+    <div class="row"><hr /></div>
+    <div class="row">
+        <div class="large-6 med-6 small-6 columns">
+            <div class="calc-image"><img src="{{url_for('static', filename='img/bac_mixed.png')}}" /></div>
+            {{form.liqour}}
+        </div>
+        <div class="large-6 med-6 small-6 columns">Hours: {{form.hours}}</div>
+    </div>
+    <div class="row">
+        <div class="large-6 med-6 columns">Weight: {{form.weight}}</div>
+        <div class="large-6 med-6 columns">Gender: {{form.gender}}</div>
+    </div>
     <p><input type="submit" value="Calcuate!"></p>
   </form>
 </section>
