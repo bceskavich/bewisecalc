@@ -48,7 +48,7 @@ def display(bac):
 
 @app.route('/resources')
 def resources():
-    return 'Hi!'
+    return render_template("resources.html")
 
 @app.route('/cups')
 def cups():

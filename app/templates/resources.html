@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<section role="main" id="cups" class="main-container" id="resources">
+	<h2>Resources</h2>
+
+	<!-- security -->
+	<section class="row">
+		<div class="large-6 med-6 small-12 columns resource-item">
+			<h4>Know Your Options!</h4>
+			<ul>
+				<li><strong>911</strong> - Syracuse Police</li>
+				<li><strong>711</strong> - DPS Emergency Line</li>
+				<li><strong>#78 / #SU</strong> - via text message</li>
+				<li><strong>(315) 443-2224</strong> - DPS Services</li>
+			</ul>
+		</div>
+		<div class="large-6 med-6 small-12 columns resource-item">
+			<h4>Get Home Safe!</h4>
+			<ul>
+				<li><strong><a href="http://www.syracusecnytaxi.com/" target="_blank">Syracuse Taxis</a></strong> - (877) 646-4159</li>
+				<li><strong><a href="https://parking.syr.edu/Parking/display.cfm?content_ID=%23((9!%0A" target="_blank">Area Buses</a></strong> - (315) 443-4652</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- transportation + fun -->
+	<section class="row">
+		<div class="large-12 med-12 small-12 columns resource-item">
+			<h4>But, have fun too!</h4>
+			<div>
+				<a href="http://www.yelp.com/biz/chucks-cafe-syracuse" target="_blank"><img src="{{url_for('static', filename='img/chucks.jpg')}}" /></a>
+				<a href="https://www.facebook.com/pages/DJs-On-The-Hill/305429622827629?rf=182988611731935" target="_blank"><img src="{{url_for('static', filename='img/djs.jpg')}}" /></a>
+			</div>
+		</div>
+	</section>
+
+</section>
+{% endblock %}
