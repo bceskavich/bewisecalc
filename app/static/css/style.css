@@ -3,6 +3,7 @@ Universal Setup
 ########################### */
 body {
 	background-color: #eee;
+	color: #32302e;
 }
 
 a:hover {
@@ -258,14 +259,49 @@ Calculator Page
 	border: 3px solid #000;
 }
 
+#info-input {
+	height: 75px;
+	width: 125px;
+	border: 0;
+	color: #000000;
+	border-bottom: 3px solid #000;
+	background: none;
+	font-size: 40px;
+	text-align: center;
+}
+
 #gender {
 	width: 60px;
-	height: 60px;
+	height: 30px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 400;
 }
 
 #calc h2 {
 	font-size: 60px;
 	margin: 40px auto;
+}
+
+#calc {
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+#hrs p,
+#hrs input,
+#weight p,
+#weight input {
+	float: left;
+	font-weight: 400;
+}
+
+#hrs p:first-child,
+#weight p:first-child {
+	padding-right: 10px;
+}
+
+#hrs p:last-child,
+#weight p:last-child {
+	padding-left: 10px;
 }
 
 .calc-image {
@@ -275,15 +311,61 @@ Calculator Page
 	margin-right: 40px;
 }
 
+#calc #calculate {
+	background-color: #ff6947;
+	border: none;
+	height: 75px;
+	width: 75px;
+	border-radius: 37.5px;
+	font-weight: 800;
+	font-size: 25px;
+	display: block;
+	margin: 20px auto;
+}
+
+#calc #calculate:hover,
+#calc #calculate:active {
+	color: #fff;
+	background-color: #32302e;
+}
+
+@media only screen and (min-width: 961px) {
+	#calc #calculate {
+		height: 100px;
+		width: 100px;
+		border-radius: 50px;
+	}
+
+	#hrs p,
+	#hrs input,
+	#weight p,
+	#weight input,
+	#calc span {
+		font-size: 25px;
+		font-weight: 800;
+	}
+
+	#gender {
+		height: 75px;
+		width: 60px;
+	}
+}
+
 @media only screen and (max-width: 700px) {
 	#calc h2 {
-		font-size: 30px;
+		font-size: 25px;
 		margin: 20px auto;
 	}
 
 	#bac-input {
 		font-size: 20px;
 		line-height: 0px;
+	}
+
+	#info-input {
+		font-size: 20px;
+		height: 40px;
+		width: 60px;
 	}
 
 	#bac-input,

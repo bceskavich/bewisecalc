@@ -42,6 +42,17 @@
           </ul>
         </aside>
 
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+        <div data-alert class="alert-box">
+          {{message}}
+          <a href="#" class="close">&times;</a>
+        </div>
+        {% endfor %}
+      {% endif %}
+      {% endwith %}
+
       {% block content %}{% endblock %}
 
       </div><!-- END inner wrap -->

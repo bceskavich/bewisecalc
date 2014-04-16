@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, redirect, url_for
+from flask import render_template, redirect, url_for, flash
 from forms import BACForm
 from methods import calculate
 
@@ -18,6 +18,8 @@ def bac():
         }
         bac = calculate(drinks, form.weight.data, form.hours.data, form.gender.data)
         return redirect(url_for('display', bac = bac))
+    else:
+        flash("Please make sure you input your weight and drinking time--we promise we'll keep it a secret.")
     return render_template("bac.html",
         form = form)
 
@@ -38,7 +40,7 @@ def display(bac):
         text = "You're beginning to reach a critical, harmful point of intoxication. Your memory is impaired and you will most likely forget much of the evening. The alcohol in your body is now supressing your gag reflex as well. You should think about contacting medical assistance."
     elif float(bac) >= .2:
         color = '#fc96a5'
-        text = "Your BAC is far too high! Seek immediate medical attention!"
+        text = "Your BAC is too high! Seek immediate medical attention!"
     return render_template("display.html",
         bac = bac,
         color = color,

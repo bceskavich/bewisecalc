@@ -14,19 +14,30 @@
             {{form.wine}}
         </div>
     </div>
-    <div class="row"><hr /></div>
+
+    <div class="row"><br /><br /></div>
+
     <div class="row">
         <div class="large-6 med-6 small-6 columns">
             <div class="calc-image"><img src="{{url_for('static', filename='img/bac_mixed.png')}}" /></div>
             {{form.liqour}}
         </div>
-        <div class="large-6 med-6 small-6 columns">Hours: {{form.hours}}</div>
+        <div class="large-6 med-6 small-6 columns" id="hrs">
+            <p>In</p> {{form.hours}} <p>hrs</p>
+        </div>
+    </div>
+
+    <div class="row"><br /><br /></div>
+
+    <div class="row">
+        <div class="large-6 med-6 small-6 columns" id="weight">
+            <p>I weigh:</p> {{form.weight}}
+        </div>
+        <div class="large-6 med-6 small-6 columns"><span>Gender:</span> {{form.gender}}</div>
     </div>
     <div class="row">
-        <div class="large-6 med-6 columns">Weight: {{form.weight}}</div>
-        <div class="large-6 med-6 columns">Gender: {{form.gender}}</div>
+        <input type="submit" value="Go!" id="calculate">
     </div>
-    <p><input type="submit" value="Calcuate!"></p>
   </form>
 </section>
 {% endblock %}
