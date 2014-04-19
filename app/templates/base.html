@@ -70,5 +70,21 @@
     <script>
       $(document).foundation();
     </script>
+    {% if feels %}
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var textArray = {{feels|safe}}
+        var c = 0;
+
+        setInterval(function(){
+          if (c >= textArray.length){
+            c = 0;
+          }
+          $('#carousel').empty().append(textArray[c]);
+          c += 1;
+        }, 3000);
+      });
+    </script>
+    {% endif %}
   </body>
 </html>

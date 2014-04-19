@@ -41,10 +41,18 @@ def display(bac):
     elif float(bac) >= .2:
         color = '#fc96a5'
         text = "Your BAC is too high! Seek immediate medical attention!"
+    if float(bac) <= .06:
+        feels = ['Relaxed', 'More confident', 'Slight euphoria', 'Feeling tipsy', 'Relaxed', 'More talkative', 'Happy']
+    elif float(bac) > .06 and float(bac) <= .20:
+        feels = ['In control', 'Unstoppable', '"Buzzed"', 'More emotional', 'The room is spinning', 'Groggy, nauseous', 'Uncoordinated', 'Drunk', 'Out of it', 'Over-confident', 'Angry, irrational, jumpy', 'Sick', 'Sleepy', 'Slurring your speech']
+    elif float(bac) > .2:
+        feels = ['Lost', 'Confused', 'Disoriented', 'Sick', 'Dizzy', 'Exhausted', 'Angry', 'Uncontrollable', 'Unintelligible', 'Unaware', 'Wasted', 'Cannot walk', 'Uncooperative', 'Loss of bladder control', 'Cold skin', 'Unresponsive', 'Puking', 'Slow breathing']
     return render_template("display.html",
         bac = bac,
         color = color,
-        text = text)
+        text = text,
+        feels = feels,
+        length = len(feels))
 
 @app.route('/resources')
 def resources():
