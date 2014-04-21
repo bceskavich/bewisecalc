@@ -74,7 +74,7 @@
     <script type="text/javascript">
       $(document).ready(function(){
         var textArray = {{feels|safe}}
-        var c = 0;
+        var c = 1;
 
         setInterval(function(){
           if (c >= textArray.length){
@@ -82,7 +82,7 @@
           }
           $('#carousel').empty().append(textArray[c]);
           c += 1;
-        }, 3000);
+        }, 2000);
       });
     </script>
     {% endif %}
