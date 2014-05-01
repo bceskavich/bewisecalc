@@ -33,6 +33,7 @@
           </nav>
         </header>
 
+        <!-- Hidden Navigation Menu -->
         <aside class="left-off-canvas-menu">
           <ul class="off-canvas-list">
             <li><label>BE Wise</label></li>
@@ -70,21 +71,24 @@
     <script>
       $(document).foundation();
     </script>
+    <!-- Loads Text Carousel if text present in template -->
     {% if feels %}
-    <script type="text/javascript">
-      $(document).ready(function(){
-        var textArray = {{feels|safe}}
-        var c = 1;
+      <script type="text/javascript">
+        $(document).ready(function(){
+          var textArray = {{feels|safe}} // Text array generated from template
+          var c = 1; // Starting point for next text input
 
-        setInterval(function(){
-          if (c >= textArray.length){
-            c = 0;
-          }
-          $('#carousel').empty().append(textArray[c]);
-          c += 1;
-        }, 2000);
-      });
-    </script>
+          setInterval(function(){
+            // If end of array reached, starts over
+            if (c >= textArray.length){
+              c = 0;
+            }
+            // Empties current text, appends new text item from location c
+            $('#carousel').empty().append(textArray[c]);
+            c += 1;
+          }, 2000);
+        });
+      </script>
     {% endif %}
   </body>
 </html>

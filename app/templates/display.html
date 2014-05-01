@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 <section role="main" class="main-container info">
+  <!-- BAC Level -->
   <h2>{{bac}}</h2>
   <h3>You might be...</h3>
 
   <div class="row">
+    <!-- Text Carousel & Warning Paragraph -->
     <div class="large-6 med-6 small-6 columns">
       <h4 id="carousel">{{feels[0]}}</h4>
       <p>{{text}}</p>
@@ -13,12 +15,14 @@
       <img src="{{url_for('static', filename='img/owl_loopy.png')}}" alt="Cold Skin" />
     </div>
   </div>
+  <!-- Link to Resources Page -->
   <div class="row">
     <div class="large-12 med-12 small-12 columns">
       <div id="button"><a href="{{url_for('resources')}}">Resources</a></div>
     </div>
   </div>
 </section>
+<!-- Dynamic Color Based on Template Input -->
 <style type="text/css">
   body {
     background-color: {{color}};

@@ -2,13 +2,18 @@
 {% block content %}
 <section role="main" class="main-container" id="calc">
   <h2>TALLY UP YOUR NIGHT</h2>
+
+  <!-- BAC Form -->
   <form action="" method="post" name="bac">
+    <!-- CSRF Hidden Tag -->
     {{form.hidden_tag()}}
     <div class="row">
+        <!-- Beer Input -->
         <div class="large-6 med-6 small-6 columns">
             <div class="calc-image"><img src="{{url_for('static', filename='img/bac_beer.png')}}" /></div>
             {{form.beer}}
         </div>
+        <!-- Wine Input -->
         <div class="large-6 med-6 small-6 columns">
             <div class="calc-image"><img src="{{url_for('static', filename='img/bac_wine.png')}}" /></div>
             {{form.wine}}
@@ -18,10 +23,12 @@
     <div class="row"><br /><br /></div>
 
     <div class="row">
+        <!-- Liqour Input -->
         <div class="large-6 med-6 small-6 columns">
             <div class="calc-image"><img src="{{url_for('static', filename='img/bac_mixed.png')}}" /></div>
             {{form.liqour}}
         </div>
+        <!-- Wine Input -->
         <div class="large-6 med-6 small-6 columns" id="hrs">
             <p>In</p> {{form.hours}} <p>hrs</p>
         </div>
@@ -30,11 +37,14 @@
     <div class="row"><br /><br /></div>
 
     <div class="row">
+        <!-- Weight Input -->
         <div class="large-6 med-6 small-6 columns" id="weight">
             <p>I weigh:</p> {{form.weight}}
         </div>
+        <!-- Gender Select Form -->
         <div class="large-6 med-6 small-6 columns"><span>Gender:</span> {{form.gender}}</div>
     </div>
+    <!-- Form Input -->
     <div class="row">
         <input type="submit" value="Go!" id="calculate">
     </div>

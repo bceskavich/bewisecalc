@@ -2,6 +2,7 @@ from flask.ext.wtf import Form
 from wtforms import IntegerField, SelectField, FloatField
 from wtforms.validators import Required
 
+# Simple BAC form, with appropriate inputs and requirements
 class BACForm(Form):
     beer = IntegerField('beer', default = 0, id="bac-input")
     wine = IntegerField('wine', default = 0, id="bac-input")
