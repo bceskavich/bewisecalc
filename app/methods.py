@@ -1,9 +1,9 @@
 def calculate(drinks, weight, period, gender):
     # Gender distribution ration
     if gender == "male":
-        r = .66
-    else:
         r = .73
+    else:
+        r = .66
 
     # Loops thru drinks dictionary to get total drink oz.
     #   Proper Dict Format -- drinks = {"beer":1, "wine":2, "liqour":1}
